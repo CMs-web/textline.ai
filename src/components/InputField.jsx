@@ -1,6 +1,6 @@
-import { useState } from "react";
+import send from "../assets/send.png"
 import { useFetchedData } from "../store";
-import { Link } from "react-router-dom";
+
 
 function InputField() {
   const fetchData = useFetchedData((state) => state.fetchData);
@@ -34,7 +34,7 @@ function InputField() {
           {isLoading ? (
             <div className="loader"></div>
           ) : (
-            <img src="src/assets/send.png" alt="send" className="w-5 h-5" />
+            <img src={send} alt="send" className="w-5 h-5" />
           )}
         </button>
       </form>

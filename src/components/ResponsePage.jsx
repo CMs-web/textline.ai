@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import { useFetchedData } from "../store";
 import { useNavigate } from "react-router-dom";
 
+import logo from "../assets/icons8-simplified-ai.svg";
+
 function ResponsePage() {
   const data = useFetchedData((state) => state.data);
   const sectionRef = useRef(null)
@@ -30,7 +32,7 @@ function ResponsePage() {
             </div>
             <div className="flex gap-5 font-semibold mb-5 mt-2">
               <img
-                src="src\assets\icons8-simplified-ai.svg"
+                src={logo}
                 className=" h-fit w-[38px] rounded-full font-medium"
               />
               <p
